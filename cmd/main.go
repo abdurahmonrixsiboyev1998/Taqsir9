@@ -18,5 +18,12 @@ func main() {
 	}
 
 	file.WriteString(num)
-	file.Close()
+
+	num2, err := git.GetEmail()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	file.WriteString(num2)
+
 }
