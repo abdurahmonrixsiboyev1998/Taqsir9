@@ -12,18 +12,19 @@ func main() {
 		log.Fatal(err)
 	}
 
-	num, err := git.GetUserName()
+	num1, error := git.GetUserName()
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal(error)
 	}
 
-	file.WriteString(num)
+	file.WriteString(num1)
 
-	num2, err := git.GetEmail()
+	num2, error := git.GetEmail()
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal(error)
 	}
 
 	file.WriteString(num2)
+	file.Close()
 
 }
